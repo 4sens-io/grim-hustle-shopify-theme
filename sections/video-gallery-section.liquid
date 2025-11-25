@@ -1,0 +1,218 @@
+{% comment %}
+  Video and Image Gallery Section
+{% endcomment %}
+<section id="shopify-section-{{ section.id }}" class="video-gallery-section">
+  <style>
+      .media-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+        padding: 20px;
+        margin: auto;
+        max-width: 1770px;
+    }
+
+      .media-container {
+        position: relative;
+        width: calc(33% - 15px); /* Adjust width for three items in a row */
+        max-width: 600px;
+        margin: 0 auto; /* Center the container */
+        overflow: hidden; /* Ensures media doesn't overflow the container */
+        text-align: center; /* Center the title and description */
+      }
+
+      .media-container video,
+      .media-container iframe,
+      .media-container img {
+        width: 100%;
+        height: 300px; /* Fixed height for uniformity */
+        object-fit: cover; /* Ensures the content scales properly */
+      }
+
+      .media-info {
+        margin-top: 10px;
+      }
+
+      .media-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+
+      .media-description {
+        font-size: 14px;
+        color: #555;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .media-container {
+          width: 100%; /* Full width for smaller screens */
+          margin-bottom: 20px; /* Add spacing between items */
+        }
+
+        .media-gallery {
+          gap: 10px; /* Reduced gap for mobile */
+          padding: 10px; /* Reduced padding for mobile */
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .media-container {
+          width: 100%; /* Two items per row for tablets */
+        }
+
+        .media-gallery {
+          gap: 15px; /* Medium gap for tablets */
+          padding: 15px; /* Medium padding for tablets */
+        }
+      }
+  </style>
+
+  <div class="media-gallery">
+    <!-- First Video -->
+    <div class="media-container">
+      {% assign video_url = section.settings.video_url_1 %}
+      {% assign video_title = section.settings.video_title_1 %}
+      {% assign video_description = section.settings.video_description_1 %}
+      {% assign video_anchor = section.settings.video_anchor_1 %}
+
+      {% if video_url and video_anchor %}
+        <a href="{{ video_anchor }}" target="_blank">
+          <video autoplay muted loop>
+            <source src="{{ video_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </a>
+      {% endif %}
+      <div class="media-info">
+        <div class="media-title">{{ video_title }}</div>
+        <div class="media-description">{{ video_description }}</div>
+      </div>
+    </div>
+
+    <!-- Middle Image -->
+    <div class="media-container">
+      {% assign image_url = section.settings.image_url %}
+      {% assign image_title = section.settings.image_title %}
+      {% assign image_description = section.settings.image_description %}
+      {% assign image_anchor = section.settings.image_anchor %}
+
+      {% if image_url and image_anchor %}
+        <a href="{{ image_anchor }}" target="_blank">
+          <img src="{{ image_url }}" alt="Image not supported">
+        </a>
+      {% endif %}
+      <div class="media-info">
+        <div class="media-title">{{ image_title }}</div>
+        <div class="media-description">{{ image_description }}</div>
+      </div>
+    </div>
+
+    <!-- Last Video -->
+    <div class="media-container">
+      {% assign video_url = section.settings.video_url_2 %}
+      {% assign video_title = section.settings.video_title_2 %}
+      {% assign video_description = section.settings.video_description_2 %}
+      {% assign video_anchor = section.settings.video_anchor_2 %}
+
+      {% if video_url and video_anchor %}
+        <a href="{{ video_anchor }}" target="_blank">
+          <video autoplay muted loop>
+            <source src="{{ video_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </a>
+      {% endif %}
+      <div class="media-info">
+        <div class="media-title">{{ video_title }}</div>
+        <div class="media-description">{{ video_description }}</div>
+      </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Video and Image Gallery",
+  "settings": [
+    {
+      "type": "text",
+      "id": "video_url_1",
+      "label": "First Video URL"
+    },
+    {
+      "type": "text",
+      "id": "video_anchor_1",
+      "label": "First Video Anchor URL",
+      "default": "https://example.com"
+    },
+    {
+      "type": "text",
+      "id": "video_title_1",
+      "label": "First Video Title",
+      "default": "Enter title for the first video"
+    },
+    {
+      "type": "text",
+      "id": "video_description_1",
+      "label": "First Video Description",
+      "default": "Enter description for the first video"
+    },
+    {
+      "type": "text",
+      "id": "image_url",
+      "label": "Middle Image URL"
+    },
+    {
+      "type": "text",
+      "id": "image_anchor",
+      "label": "Middle Image Anchor URL",
+      "default": "https://example.com"
+    },
+    {
+      "type": "text",
+      "id": "image_title",
+      "label": "Middle Image Title",
+      "default": "Enter title for the middle image"
+    },
+    {
+      "type": "text",
+      "id": "image_description",
+      "label": "Middle Image Description",
+      "default": "Enter description for the middle image"
+    },
+    {
+      "type": "text",
+      "id": "video_url_2",
+      "label": "Last Video URL"
+    },
+    {
+      "type": "text",
+      "id": "video_anchor_2",
+      "label": "Last Video Anchor URL",
+      "default": "https://example.com"
+    },
+    {
+      "type": "text",
+      "id": "video_title_2",
+      "label": "Last Video Title",
+      "default": "Enter title for the last video"
+    },
+    {
+      "type": "text",
+      "id": "video_description_2",
+      "label": "Last Video Description",
+      "default": "Enter description for the last video"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video and Image Gallery",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+

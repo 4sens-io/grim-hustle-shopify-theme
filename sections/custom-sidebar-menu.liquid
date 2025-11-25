@@ -1,0 +1,184 @@
+{{ 'custom.css' | asset_url | stylesheet_tag }}
+
+<div class="custom-header">
+  <div class="container">
+    <header class="header-container header-mobile--wrapper">
+      <!-- Left Section: Hamburger Button -->
+      <div class="hamburger-text">
+        <p class="menu-text" onclick="openMenu()">MENU</p>
+        <div class="hamburger header-mobile__item" onclick="openMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      </div>
+
+      <!-- Middle Section: Logo -->
+      {% comment %}
+          <div class="header-logo header__heading-link header-mobile__item">
+          <a href={{ routes.root_url }}>
+            <img src="{{ section.settings.logo | img_url :'master' }}" width="100" height="auto" class="header-logo-img">
+          </a>
+        </div>
+      {% endcomment %}
+
+      <div class="header-logo header__heading-link header-mobile__item">
+        {% if section.settings.logo %}
+          <a href="{{ routes.root_url }}">
+            <img
+              src="{{ section.settings.logo | img_url: 'master' }}"
+              width="100"
+              height="auto"
+              class="header-logo-img"
+            >
+          </a>
+        {% else %}
+          <a href="{{ routes.root_url }}" class="header-text">
+            {{ section.settings.logo_text }}
+          </a>
+        {% endif %}
+      </div>
+
+      <!-- Right Section: Icons -->
+      <div class="header-icons">
+        <!-- User Account Icon -->
+        <div class="header-icon header-mobile--icon header-mobile__item header-mobile__item--customer">
+          {% comment %}
+            <img src="{{ section.settings.icon1_image | img_url :'master' }}" width="100" height="auto" alt="Account Icon">
+          {% endcomment %}
+
+          <a
+            href="{{ routes.account_login_url }}"
+            class="header__icon header__icon--account{% if  section.blocks.settings.icon == '2' %} header__icon--account-2{% endif %} link link--text focus-inset"
+            {% if settings.is_contained %}
+              data-open-auth-sidebar
+            {% endif %}
+          >
+            {% render 'icon-account-2' %}
+          </a>
+        </div>
+        <!-- Cart Icon -->
+        <div class="header-icon header__icon--cart header-mobile--icon header-mobile__item header-mobile__item--cart">
+          {% comment %}
+            <img src="{{ section.settings.icon2_image | img_url :'master' }}" width="100" height="auto" alt="Cart Icon">
+          {% endcomment %}
+          <a
+            href="{{ routes.cart_url }}"
+            class="header__icon header__icon--cart link link--text focus-inset cart-icon-bubble"
+            {% if settings.show_quick_cart %}
+              data-cart-sidebar
+            {% endif %}
+          >
+            {% render 'icon-cart-03' %}
+            <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+            <div class="cart-count-bubble">
+              <span class="text" aria-hidden="true" data-cart-count>
+                {%- if cart.item_count < 100 -%}
+                  {{ cart.item_count }}
+                {%- else -%}
+                  {{ 'sections.cart.item_99' | t }}
+                {%- endif -%}
+              </span>
+              <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <div class="header-close">
+    <h3>Menu</h3>
+    <button class="close-btn" onclick="closeMenu()">×</button>
+  </div>
+  <ul class="list-unstyled">
+    {% if section.settings.menu != blank %}
+      {% assign menu = linklists[section.settings.menu] %}
+      {% if menu %}
+        {% for link in menu.links %}
+          <li class="menu-item">
+            <a href="{{ link.url }}" class="menu-link">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      {% else %}
+        <li class="menu-item">Menu not found</li>
+      {% endif %}
+    {% endif %}
+  </ul>
+</div>
+
+<script>
+  function openMenu() {
+      const sidebar = document.getElementById('sidebar');
+      const hamburger = document.querySelector('.hamburger');
+
+      // Show sidebar
+      sidebar.classList.add('visible');
+
+      // Animate hamburger to close position (transform to X shape)
+      hamburger.classList.add('active');
+  }
+
+  function closeMenu() {
+      const sidebar = document.getElementById('sidebar');
+      const hamburger = document.querySelector('.hamburger');
+
+      // Hide sidebar
+      sidebar.classList.remove('visible');
+      hamburger.classList.remove('active');
+  }
+
+  // Function to navigate to the User Account page
+  function navigateToUserAccount() {
+    window.location.href = "/account";
+  }
+
+  // Function to navigate to the Shopify Cart page
+  function navigateToCart() {
+    window.location.href = "/cart";
+  }
+</script>
+
+{% schema %}
+{
+    "name": "Custom Header",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "icon1_image",
+            "label": "First Icon Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "icon2_image",
+            "label": "Second Icon Image"
+        },
+        {
+            "type": "link_list",
+            "id": "menu",
+            "label": "Menu"
+        },
+        {
+            "type": "text",
+            "id": "logo_text",
+            "label": "Logo Text",
+            "default": "Your Store Name"
+        }
+
+    ],
+    "presets": [
+        {
+            "name": "Custom Grim Header",
+            "category": "Header"
+        }
+    ]
+}
+{% endschema %}

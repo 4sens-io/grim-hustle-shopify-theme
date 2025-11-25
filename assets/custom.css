@@ -1,0 +1,171 @@
+@media (max-width: 1199px) {
+  #shopify-section-template--23838278910296__video_block_8VaQB6
+    .section-block-template--23838278910296__video_block_8VaQB6 {
+    margin-top: 90px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    #shopify-section-template--23838278484312__rich_text_pBRXyj 
+    .section-block-template--23838278484312__rich_text_pBRXyj {
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+}
+.external{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.external p {
+    font-size: 18px;
+    font-weight: 700;
+}
+.hamburger-text{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+p.menu-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: inherit;
+    letter-spacing: 0.3rem;
+    cursor: pointer;
+}
+
+@media(max-width: 767px){
+  p.menu-text{
+    display: none;
+  }
+}
+
+/* Hamburger Button */
+.custom-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff; /* Set your desired background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  padding: 10px 0; /* Optional: Adjust padding for better appearance */
+}
+
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001;
+  position: relative;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Header logo */
+.header-logo {
+  width: 70px;
+}
+
+#shopify-section-sections--23838279860568__custom_sidebar_menu_er6mRj
+  a.menu-link {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .header-logo {
+    width: 50px;
+  }
+}
+
+/* icons */
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.header-icons,
+.header-close {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#shopify-section-sections--23838279860568__custom_sidebar_menu_er6mRj
+  .header__icon--cart
+  .cart-count-bubble {
+  position: absolute;
+  right: -12px;
+  top: -8px;
+  background: #121212;
+  color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Hidden initially */
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.6s ease-in-out;
+  z-index: 1001;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.visible {
+  left: 0; /* Visible when 'visible' class is added */
+}
+
+.sidebar .close-btn {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Menu Items */
+.menu-item {
+  padding: 10px 15px;
+  margin: 5px 0;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  opacity: 1;
+  transition: opacity 0.5s ease, background-color 0.3s ease;
+}
+
+.menu-item.loading {
+  background-color: #ddd;
+  opacity: 0.5;
+  color: transparent;
+}
+
+/* Hide Hamburger Button when Sidebar is Visible */
+.sidebar.visible + .hamburger {
+  display: none;
+}

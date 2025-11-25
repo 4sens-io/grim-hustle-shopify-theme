@@ -1,0 +1,203 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_7wytCT": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "hr {margin: 0; padding: 0;}"
+      ],
+      "settings": {
+        "custom_liquid": "<hr>"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_3g7NEG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nfmPUm": {
+          "type": "heading",
+          "settings": {
+            "heading": "RING OF GRIM GIFT: STORIES FROM MEXICO",
+            "heading_size": 30,
+            "heading_size_mb": 20,
+            "heading_line_height": 1,
+            "heading_color": "#000000"
+          }
+        },
+        "text_XRFXFg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Against the breathtaking backdrop of Cancún’s coastline, the Ring of Grim Mexico event was a fusion of elegance and adventure. Between white sand beaches and the turquoise Caribbean Sea, we experienced more than just moments of connection—we pushed our limits. Crawling through hidden caves, exploring the raw beauty of the jungle, and embracing the adrenaline of the unknown, we strengthened our determination and team spirit. An event where experience and memory became on.</p>",
+            "text_size": 16,
+            "text_size_mb": 14,
+            "text_font_weight": "400",
+            "text_line_height": 1.4,
+            "margin_top_text": 20,
+            "text_color": "#000000",
+            "text_width": "800px"
+          }
+        },
+        "button_Mb4LPw": {
+          "type": "button",
+          "settings": {
+            "button_style": "button_1",
+            "button_label": "Learn more here",
+            "button_link": "https://www.thegrimalliance.com/mexico",
+            "margin_top_button": 30,
+            "enable_underline_button": false,
+            "button_color": "#121212",
+            "button_border_color": "rgba(0,0,0,0)",
+            "button_bg_color": "rgba(0,0,0,0)",
+            "button_bg_gradient": "",
+            "button_color_hover": "#121212",
+            "button_border_color_hover": "rgba(0,0,0,0)",
+            "button_bg_color_hover": "#ffffff",
+            "button_bg_gradient_hover": "",
+            "button_width": "270px"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nfmPUm",
+        "text_XRFXFg",
+        "button_Mb4LPw"
+      ],
+      "custom_css": [
+        "a.button {text-decoration: underline;}"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 150,
+        "mg_top_tablet": 150,
+        "mg_top_mobile": 150,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "video_block_8VzP7x": {
+      "type": "video-block",
+      "disabled": true,
+      "settings": {
+        "container": "fullwidth",
+        "spotlight_bg": "#ffffff",
+        "spotlight_bg_gradient": "",
+        "video_block_title": "",
+        "color_title": "#232323",
+        "fontsize_title": 16,
+        "fontsize_title_mb": 22,
+        "margin_bottom_title": 45,
+        "video_block_des": "",
+        "color_des": "#3c3c3c",
+        "fontsize_des": 16,
+        "title_align": "center",
+        "cover_image": "shopify://shop_images/P1000812_1.jpg",
+        "autoplay": false,
+        "video_height": "54",
+        "video_height_mb": "100",
+        "style_video": "youtube",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_url_mb": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "url_mp4": "",
+        "url_mp4_mb": "",
+        "description": "",
+        "full_width": true,
+        "position_icon": "center",
+        "heading": "",
+        "font_size_heading": 40,
+        "font_size_heading_mb": 24,
+        "margin_bottom_heading": 20,
+        "color_heading": "#232323",
+        "text": "",
+        "font_size_des": 12,
+        "font_size_des_mb": 12,
+        "margin_bottom_des": 35,
+        "color_des_content": "#232323",
+        "content_width": 475,
+        "align": "center",
+        "position": "left",
+        "btn_text": "",
+        "link": "",
+        "button_width": 235,
+        "button_color": "#ffffff",
+        "button_border": "#232323",
+        "button_background": "#232323",
+        "button_background_gradient": "",
+        "button_color_hover": "#ffffff",
+        "button_border_hover": "#232323",
+        "button_background_hover": "#232323",
+        "button_background_gradient_hover": "",
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "blog_posts_list_6NyH44": {
+      "type": "blog-posts-list",
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "featured_blog_title": "Latest Posts",
+        "blog_posts": "news",
+        "item_distance": 15,
+        "post_limit": 3,
+        "limit_content_des": 22,
+        "margin_bottom_title": 0,
+        "margin_bottom_info": 13,
+        "margin_bottom_des": 6,
+        "margin_left_info": 0,
+        "show_more_button_text_color": "#3c3c3c",
+        "show_more_button_border_color": "#1e1e1e",
+        "show_more_button_background_color": "#1e1e1e",
+        "show_more_button_text_color_hover": "#000000",
+        "show_more_button_border_color_hover": "#ffffff",
+        "show_more_button_background_color_hover": "#ffffff",
+        "view_all": "",
+        "font_weight_view_all": "400",
+        "mg_top_view": 0,
+        "enable_border_view_all": true,
+        "link_view_all": "",
+        "color_view_all": "#3c3c3c",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_7wytCT",
+    "main",
+    "rich_text_3g7NEG",
+    "video_block_8VzP7x",
+    "blog_posts_list_6NyH44"
+  ]
+}
