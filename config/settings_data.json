@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "password_closing_page": true,
     "layout_body": "default",
     "mobile_menu": "custom",
     "product_page_layout": "default",
