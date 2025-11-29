@@ -79,6 +79,39 @@
         "label": "Overlay password",
         "default": "password"
       }
+      ,
+      {
+        "type": "richtext",
+        "id": "password_overlay_banner_text",
+        "label": "Overlay banner text",
+        "default": "<p>A raw story of power, survival, and transformation. <br>The Grim Series merges real experiences with timeless wisdom, guiding you through the darkness of a man’s becoming.</p>"
+      },
+      {
+        "type": "color",
+        "id": "password_overlay_banner_color",
+        "label": "Overlay banner text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "range",
+        "id": "password_overlay_banner_font_size",
+        "label": "Overlay banner font size (desktop)",
+        "min": 10,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "password_overlay_banner_font_size_mb",
+        "label": "Overlay banner font size (mobile)",
+        "min": 10,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "default": 12
+      }
     ]
   },
   {
