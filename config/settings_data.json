@@ -10,6 +10,9 @@
 {
   "current": {
     "password_closing_page": true,
+    "password_overlay_banner_text": "<p>Join the Newsletter to be notified first when the Shop opens</p>",
+    "password_overlay_banner_font_size": 21,
+    "password_overlay_banner_font_size_mb": 14,
     "layout_body": "default",
     "mobile_menu": "custom",
     "product_page_layout": "default",
