@@ -10,8 +10,10 @@
 {
   "current": {
     "password_closing_page": true,
-    "password_overlay_banner_text": "<p>Join the Newsletter to be notified first when the Shop opens</p>",
-    "password_overlay_banner_font_size": 21,
+    "password_overlay_title": "Next Drop coming soon",
+    "password_overlay_iframe_src": "<iframe\n    src=\"https://connect.grimhustle.com/widget/form/5LMwXvYZ8Yz40KwaAFaE\"\n    style=\"width:100%;height:100%;border:none;border-radius:0px\"\n    id=\"inline-5LMwXvYZ8Yz40KwaAFaE\" \n    data-layout=\"{'id':'INLINE'}\"\n    data-trigger-type=\"alwaysShow\"\n    data-trigger-value=\"\"\n    data-activation-type=\"alwaysActivated\"\n    data-activation-value=\"\"\n    data-deactivation-type=\"neverDeactivate\"\n    data-deactivation-value=\"\"\n    data-form-name=\"Grim Shop Opt-In\"\n    data-height=\"430\"\n    data-layout-iframe-id=\"inline-5LMwXvYZ8Yz40KwaAFaE\"\n    data-form-id=\"5LMwXvYZ8Yz40KwaAFaE\"\n    title=\"Grim Shop Opt-In\"\n        >\n</iframe>\n<script src=\"https://connect.grimhustle.com/js/form_embed.js\"></script>",
+    "password_overlay_banner_text": "<p>We don’t sell endlessly.<br/><br/>We release with intention.</p><p>One drop. Every quarter.<br/><br/>Limited GRIM artifacts. No restocks.<br/><br/>Each item exists only in its season, and may never return.</p><p>If you want first access, join the list below.</p>",
+    "password_overlay_banner_font_size": 20,
     "password_overlay_banner_font_size_mb": 14,
     "layout_body": "default",
     "mobile_menu": "custom",
