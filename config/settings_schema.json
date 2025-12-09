@@ -23,10 +23,34 @@
         "default": "COOMING SOON..."
       },
       {
+        "type": "font_picker",
+        "id": "password_overlay_title_font",
+        "label": "Overlay title font",
+        "default": "sans-serif"
+      },
+      {
+        "type": "text",
+        "id": "password_overlay_title_font_custom",
+        "label": "Custom title font family",
+        "info": "Overrides the font picker if set. E.g. 'Gobold bold'"
+      },
+      {
         "type": "color",
         "id": "password_overlay_bg_color",
         "label": "Overlay background color",
         "default": "#000000"
+      },
+      {
+        "type": "font_picker",
+        "id": "password_overlay_body_font",
+        "label": "Overlay general font",
+        "default": "sans-serif"
+      },
+      {
+        "type": "text",
+        "id": "password_overlay_body_font_custom",
+        "label": "Custom general font family",
+        "info": "Overrides the font picker if set. E.g. 'Gobold bold'"
       },
       {
         "type": "color",
@@ -85,6 +109,18 @@
         "id": "password_overlay_banner_text",
         "label": "Overlay banner text",
         "default": "<p>A raw story of power, survival, and transformation. <br>The Grim Series merges real experiences with timeless wisdom, guiding you through the darkness of a man’s becoming.</p>"
+      },
+      {
+        "type": "font_picker",
+        "id": "password_overlay_banner_font",
+        "label": "Overlay banner font",
+        "default": "sans-serif"
+      },
+      {
+        "type": "text",
+        "id": "password_overlay_banner_font_custom",
+        "label": "Custom banner font family",
+        "info": "Overrides the font picker if set. E.g. 'Gobold bold'"
       },
       {
         "type": "color",
