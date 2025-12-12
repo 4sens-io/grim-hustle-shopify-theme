@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "password_closing_page": true,
+    "password_closing_page": false,
     "password_overlay_title": "Next Drop in 1 day",
     "password_overlay_title_font_custom": "Gobold bold",
     "password_overlay_body_font_custom": "Gobold bold",
