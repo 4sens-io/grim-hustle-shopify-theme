@@ -91,10 +91,10 @@
         "enable_column": false,
         "content_align": "center",
         "mg_top_desktop": 150,
-        "mg_top_tablet": 50,
+        "mg_top_tablet": 130,
         "mg_top_mobile": 130,
         "mg_bottom_desktop": 150,
-        "mg_bottom_tablet": 50,
+        "mg_bottom_tablet": 30,
         "mg_bottom_mobile": 30
       }
     },
